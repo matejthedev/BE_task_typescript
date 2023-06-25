@@ -1,0 +1,19 @@
+{
+  "name": "backend_task-profico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "typescript": "^5.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
