@@ -2,6 +2,7 @@ import {Request, Response} from 'express';
 import { User } from '../entity/User';
 import { AppDataSource } from '../data-source';
 import { ERROR_MESSAGES, STATUS } from '../constants';
+import bcrypt from 'bcrypt';
 
 export const getUsers = async (req: Request, res: Response) => {
   try {
@@ -17,7 +18,8 @@ export const createUser = async (req: Request, res: Response) => {
   try {
     const userRepository = AppDataSource.getRepository(User);
     const { email, password, firstName, lastName } = req.body;
-    const newUser = userRepository.create({ email, password, firstName, lastName });
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = userRepository.create({ email, password: hashedPassword, firstName, lastName });
     await userRepository.save(newUser);
     res.status(STATUS.CREATED).json(newUser);
   } catch (error) {
