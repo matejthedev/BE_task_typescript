@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
-import { getJoke } from '../controllers/jokes';
+import { getJokeController } from '../controllers/jokes';
 
-router.get('/', getJoke);
+router.get('/', getJokeController);
 
 export default router;
