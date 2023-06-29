@@ -11,6 +11,10 @@ app.use('/login', login);
 app.use('/users', users);
 app.use('/jokes', jokes);
 
-app.listen(process.env.SERVER_PORT , () => {
-  console.log(SUCCESS_MESSAGES.SERVER_STARTED(Number(process.env.SERVER_PORT) || CONFIG.FALLBACK_SERVER_PORT));
+app.listen(process.env.SERVER_PORT, () => {
+  console.log(
+    SUCCESS_MESSAGES.SERVER_STARTED(
+      Number(process.env.SERVER_PORT) || CONFIG.FALLBACK_SERVER_PORT
+    )
+  );
 });

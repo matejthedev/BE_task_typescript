@@ -1,12 +1,12 @@
-import "reflect-metadata";
-import { DataSource } from "typeorm";
-import { User } from "./entity/User";
-import { SUCCESS_MESSAGES } from "./constants";
-import dotenv from "dotenv";
+import 'reflect-metadata';
+import { DataSource } from 'typeorm';
+import { User } from './entity/User';
+import { SUCCESS_MESSAGES } from './constants';
+import dotenv from 'dotenv';
 dotenv.config();
 
 export const AppDataSource = new DataSource({
-  type: "postgres",
+  type: 'postgres',
   host: process.env.POSTGRES_HOST,
   port: Number(process.env.POSTGRES_PORT),
   username: process.env.POSTGRES_USER,
