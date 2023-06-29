@@ -1,4 +1,4 @@
-import { jokeApiUrl } from "../constants";
+import { ERROR_MESSAGES, jokeApiUrl } from "../constants";
 
 type Joke = {
   categories: Array<string>
@@ -12,6 +12,7 @@ type Joke = {
 
 export const getJoke = async (): Promise<Joke> => {
   const response = await fetch(jokeApiUrl);
+  if (!response.ok) throw new Error(ERROR_MESSAGES.FAILED_GET_JOKE);
   const joke = await response.json();
   return joke;
 };

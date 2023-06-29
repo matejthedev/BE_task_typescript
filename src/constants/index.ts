@@ -9,6 +9,8 @@ export const ERROR_MESSAGES = {
   FAILED_DELETE_USER: 'Failed to delete user',
   FAILED_GET_USERS: 'Failed to get users',
   FAILED_GET_USER: 'User not found',
+  FAILED_GET_JOKE: 'Failed to get joke',
+  MISSING_CREDENTIALS: 'Missing credentials',
 }
 
 export const SUCCESS_MESSAGES = {
