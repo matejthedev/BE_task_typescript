@@ -14,17 +14,22 @@ export const ERROR_MESSAGES = {
   UNAUTHORIZED: 'Unauthorized',
   MISSING_TOKEN: 'Missing header',
   MISSING_AUTH_HEADER: 'Missing authorization header',
+  EMAIL_NOT_SENT: 'Email not sent',
 };
 
 export const SUCCESS_MESSAGES = {
   CONNECTION_SUCCESS: 'Database connection established',
   SERVER_STARTED: (port: number) => `Server started on ${port}`,
   USER_LOGGED_IN: 'User logged in',
+  EMAIL_SENT: 'Email sent',
 };
 
 export const CONFIG = {
   FALLBACK_SERVER_PORT: 3000,
 };
+
+export const MAIL_SERVICE = 'gmail';
+export const MAIL_TITLE = 'Daily dose of Chuck Norris';
 
 export const STATUS = {
   OK: 200,
