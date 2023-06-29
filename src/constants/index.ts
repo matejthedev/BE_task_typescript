@@ -8,11 +8,13 @@ export const ERROR_MESSAGES = {
   FAILED_UPDATE_USER: 'Failed to update user',
   FAILED_DELETE_USER: 'Failed to delete user',
   FAILED_GET_USERS: 'Failed to get users',
+  FAILED_GET_USER: 'User not found',
 }
 
 export const SUCCESS_MESSAGES = {
   CONNECTION_SUCCESS: 'Database connection established',
   SERVER_STARTED: (port: number) => `Server started on ${port}`,
+  USER_LOGGED_IN: 'User logged in',
 }
 
 export const CONFIG = {
