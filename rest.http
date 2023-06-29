@@ -1,0 +1,23 @@
+### Register
+POST http://localhost:3000/users/ HTTP/1.1
+content-type: application/json
+{
+   "email": "mamaje@gmail.com",
+   "password": "NadanovHelikopter",
+   "fisrtName": "Mama",
+   "lastName": "Je",
+}
+
+### Login
+POST http://localhost:3000/login/ HTTP/1.1
+content-type: application/json
+
+{
+   "email": "mamaje@gmail.com",
+   "password": "mamaje"
+}
+
+### Get the joke
+GET http://localhost:3000/joke/ HTTP/1.1
+Authorization: Bearer <token>
+

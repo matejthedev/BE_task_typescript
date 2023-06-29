@@ -1,4 +1,4 @@
-import {Request, Response} from 'express';
+import { Request, Response } from 'express';
 import { ERROR_MESSAGES, STATUS } from '../constants';
 import { createUser, getUsers } from '../services/users';
 

@@ -1,10 +1,13 @@
 import express from 'express';
 import { SUCCESS_MESSAGES, CONFIG } from './constants';
+import login from './routes/login';
 import users from './routes/users';
 import jokes from './routes/jokes';
 
 const app = express();
 app.use(express.json());
+
+app.use('/login', login);
 app.use('/users', users);
 app.use('/jokes', jokes);
 
