@@ -11,6 +11,9 @@ export const ERROR_MESSAGES = {
   FAILED_GET_USER: 'User not found',
   FAILED_GET_JOKE: 'Failed to get joke',
   MISSING_CREDENTIALS: 'Missing credentials',
+  UNAUTHORIZED: 'Unauthorized',
+  MISSING_TOKEN: 'Missing header',
+  MISSING_AUTH_HEADER: 'Missing authorization header',
 }
 
 export const SUCCESS_MESSAGES = {
@@ -29,6 +32,7 @@ export const STATUS = {
   BAD_REQUEST: 400,
   NOT_FOUND: 404,
   INTERNAL_SERVER_ERROR: 500,
+  UNAUTHORIZED: 401,
 }
 
 export const jokeApiUrl = 'https://api.chucknorris.io/jokes/random';

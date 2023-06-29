@@ -13,3 +13,10 @@ export const createJWT = (user: User) => jwt.sign(
   process.env.JWT_SECRET_KEY as string,
   { expiresIn: process.env.JWT_EXPIRATION }
 );
+
+export const verifyJWT = (token: string) => { 
+  return jwt.verify(
+  token,
+  process.env.JWT_SECRET_KEY as string
+  );
+}
