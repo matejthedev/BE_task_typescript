@@ -11,7 +11,9 @@ export const auth = async (req: Request, res: Response, next: NextFunction) => {
     verifyJWT(token);
     // req.user = user;
     next();
-  } catch (error: any) {
-    res.status(STATUS.UNAUTHORIZED).json({ error: ERROR_MESSAGES.UNAUTHORIZED });
+  } catch (error) {
+    res
+      .status(STATUS.UNAUTHORIZED)
+      .json({ error: ERROR_MESSAGES.UNAUTHORIZED });
   }
-}
+};

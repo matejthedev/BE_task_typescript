@@ -14,17 +14,17 @@ export const ERROR_MESSAGES = {
   UNAUTHORIZED: 'Unauthorized',
   MISSING_TOKEN: 'Missing header',
   MISSING_AUTH_HEADER: 'Missing authorization header',
-}
+};
 
 export const SUCCESS_MESSAGES = {
   CONNECTION_SUCCESS: 'Database connection established',
   SERVER_STARTED: (port: number) => `Server started on ${port}`,
   USER_LOGGED_IN: 'User logged in',
-}
+};
 
 export const CONFIG = {
   FALLBACK_SERVER_PORT: 3000,
-}
+};
 
 export const STATUS = {
   OK: 200,
@@ -33,6 +33,6 @@ export const STATUS = {
   NOT_FOUND: 404,
   INTERNAL_SERVER_ERROR: 500,
   UNAUTHORIZED: 401,
-}
+};
 
 export const jokeApiUrl = 'https://api.chucknorris.io/jokes/random';

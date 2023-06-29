@@ -6,7 +6,10 @@ export const getJokeController = async (_req: Request, res: Response) => {
   try {
     const joke = await getJoke();
     res.status(STATUS.OK).json(joke.value);
-  } catch (error: any) {
-    res.status(STATUS.INTERNAL_SERVER_ERROR).json({ error: error.message });
+  } catch (error) {
+    const caughtError = error as Error;
+    res
+      .status(STATUS.INTERNAL_SERVER_ERROR)
+      .json({ error: caughtError.message });
   }
-}
+};
